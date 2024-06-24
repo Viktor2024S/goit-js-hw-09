@@ -33,6 +33,7 @@ body {
   justify-content: center;
   gap: 20px 24px;
   list-style-type: none;
+  width: calc((320px * 3) + (24px * 2));
 }
 
 .gallery-item {
