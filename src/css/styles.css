@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 /* === GALLERY === */
@@ -59,30 +60,14 @@ body {
   transform: scale(1.1);
 }
 
-/* Стилі SimpleLightbox */
-.simple-lightbox .sl-overlay {
+/* Модальне вікно */
+.simple-lightbox {
+  z-index: 1000;
   background-color: rgba(46, 47, 66, 0.8);
 }
 
-.simple-lightbox .sl-wrapper {
-  text-align: center;
-}
-
-.simple-lightbox .sl-image {
+.simple-lightbox img {
   max-width: 1112px;
   max-height: 640px;
   object-fit: contain;
-}
-
-.simple-lightbox .sl-caption {
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 15px;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.simple-lightbox .sl-caption.visible {
-  opacity: 1;
 }

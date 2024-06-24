@@ -67,27 +67,28 @@ const images = [
   },
 ];
 
-const galleryContainer = document.querySelector('.gallery');
-
-const createGalleryItems = images
-  .map(({ preview, original, description }) => {
+function createGalleryItems() {
+  const gallery = document.querySelector('.gallery');
+  const items = images.map(image => {
     return `
-        <li class="gallery-item">
-            <a class="gallery-link" href="${original}">
-                <img
-                    class="gallery-image"
-                    src="${preview}"
-                    alt="${description}"
-                />
-            </a>
-        </li>`;
-  })
-  .join('');
+      <li class="gallery-item">
+        <a class="gallery-link" href="${image.original}">
+          <img
+            class="gallery-image"
+            src="${image.preview}"
+            alt="${image.description}"
+          />
+        </a>
+      </li>
+    `;
+  });
 
-galleryContainer.innerHTML = createGalleryItems;
+  gallery.innerHTML = items.join('');
+}
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
+createGalleryItems();
+
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
