@@ -61,7 +61,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Модальне вікно */
+/* ============= Модальне вікно =============== */
 .simple-lightbox {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
@@ -73,4 +73,69 @@ body {
   max-width: 1112px;
   max-height: 640px;
   object-fit: contain;
+}
+
+/* !=============================================! */
+/* ============ Form style ===================== */
+.feedback-form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feedback-form input[type='email'],
+.feedback-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  transition: border 0.3s ease;
+  color: #2e2f42;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.feedback-form input[type='email']:hover,
+.feedback-form textarea:hover {
+  border-width: 2px;
+  border-color: #888;
+}
+
+.feedback-form input[type='email']:focus,
+.feedback-form textarea:focus {
+  border-width: 1px;
+  border-color: #555;
+  outline: none;
+}
+
+.feedback-form button[type='submit'] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback-form button[type='submit']:hover {
+  background: #6c8cff;
 }
