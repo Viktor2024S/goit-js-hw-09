@@ -62,13 +62,15 @@ body {
 }
 
 /* Модальне вікно */
-/* .simple-lightbox {
+.simple-lightbox {
   z-index: 1000;
-  background-color: rgba(46, 47, 66, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 1440px;
+  height: 696px;
 }
 
 .simple-lightbox img {
   max-width: 1112px;
   max-height: 640px;
   object-fit: contain;
-} */
+}
